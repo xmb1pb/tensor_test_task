@@ -6,6 +6,12 @@ import pytest
 from .pages.main_page import MainPage
 from .pages.pictures_page import PicturesPage
 
+"""
+Заметка по первому тесту: не смотря на то, что все первые 5 результатов 
+поисковой выдачи так и или иначе связаны с Тензор
+ссылка на tensor.ru подержится не более, чем в двух
+Тест вполне закономерно падает
+"""
 
 @pytest.mark.search_test()
 class TestSearchOnMainPage:
