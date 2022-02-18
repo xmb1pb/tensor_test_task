@@ -1,3 +1,7 @@
+'''
+Здесь описаны локаторы элементов на страницах
+'''
+
 from selenium.webdriver.common.by import By
 
 

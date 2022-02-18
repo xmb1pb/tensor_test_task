@@ -1,3 +1,7 @@
+'''
+Это модуль с тестами.
+'''
+
 import pytest
 from .pages.main_page import MainPage
 from .pages.pictures_page import PicturesPage

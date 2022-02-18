@@ -1,5 +1,8 @@
-from selenium.webdriver import ActionChains
+'''
+Здесь описан класс для страницы Картинки
+'''
 
+from selenium.webdriver import ActionChains
 from .base_page import BasePage, hasher, download_image
 from .locators import PicturesPageLocators
 import urllib.parse

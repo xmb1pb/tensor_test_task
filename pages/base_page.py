@@ -1,3 +1,7 @@
+'''
+Это базовый класс, содержит общие для всех страницы аттрибуты и методы
+'''
+
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.webdriver.support import expected_conditions as EC

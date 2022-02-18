@@ -27,3 +27,4 @@ pytest --browser_name chrome --language ru -m search_test --tb=line .\test_yande
 
 Предполагается, что путь к драйверам прописан в PATH, иначе следует указать вручную в conftest.py.
 
+
