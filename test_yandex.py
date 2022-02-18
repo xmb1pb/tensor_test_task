@@ -1,6 +1,6 @@
-'''
+"""
 Это модуль с тестами.
-'''
+"""
 
 import pytest
 from .pages.main_page import MainPage
@@ -8,14 +8,14 @@ from .pages.pictures_page import PicturesPage
 
 
 @pytest.mark.search_test()
-class TestSearchOnMainPage():
+class TestSearchOnMainPage:
     # поиск в яндексе
     def test_search_main_page(self, browser):
         # открываем главную страницу яндекса
         link = "https://yandex.ru/"
         # присваиваем запрос переменной
-        search_query='тензор'
-        search_link='tensor.ru'
+        search_query = 'тензор'
+        search_link = 'tensor.ru'
         # создаем экземпляр класса
         page = MainPage(browser, link)
         # вызываем метод open и открываем страницу
@@ -36,7 +36,7 @@ class TestSearchOnMainPage():
 
 
 @pytest.mark.pictures_test()
-class TestPicturesPage():
+class TestPicturesPage:
     def test_pictures_page(self, browser):
         link = "https://yandex.ru/"
         pictures_link = "https://yandex.ru/images/"
