@@ -6,12 +6,12 @@ class BasePageLocators():
 
 
 class MainPageLocators():
-    # поле ввода для поиска
+    # поле ввода для поиска. текст в поле поиска get_property('value')
     SEARCH_FIELD = (By.XPATH, '//input[@class="input__control input__input mini-suggest__input"]')
     # кнопка "Найти"
     SEARCH_BUTTON = (By.XPATH, '//button[@type="submit"]')
     # таблица с подсказками поиска
-    SEARCH_SUGGESTS_FRAME = ((By.XPATH, '//ul[@class="mini-suggest__popup-content"]'))
+    SEARCH_SUGGESTS_FRAME = (By.XPATH, '//ul[@class="mini-suggest__popup-content"]')
     # элементы выпадающего списка подсказок поиска
     SEARCH_SUGGESTS_FRAME_ELEMENTS = (By.XPATH, '//ul[@class="mini-suggest__popup-content"]/li')
     # таблица с результатами поиска
@@ -21,17 +21,17 @@ class MainPageLocators():
     # ссылка на "Картинки"
     PICTURES_PAGE_LINK = (By.XPATH, '//a[@data-id="images"]')
 
-class PicturesPageLocators():
-    # форма ввода логина
-    LOGIN_FORM = (By.CSS_SELECTOR, '#login_form')
-    # форма регистрации
-    REGISTER_FORM = (By.CSS_SELECTOR, '#register_form')
-    # поле ввода мейла при регистрации
-    REGISTER_EMAIL = (By.XPATH, '//input[@name="registration-email"]')
-    # поле ввода пароля при регистрации
-    REGISTER_PASS = (By.XPATH, '//input[@name="registration-password1"]')
-    # поле подтверждения пароля
-    REGISTER_PASS_CONFIRM = (By.XPATH, '//input[@name="registration-password2"]')
-    # кнопка завершения регистрации
-    REGISTER_BUTTON = (By.XPATH, '//button[@name="registration_submit"]')
 
+class PicturesPageLocators():
+    # поле поиска на странице картинок. текст в поле поиска get_property('value')
+    PICTURES_SEARCH_FIELD = (By.XPATH, '//input[@class="input__control mini-suggest__input"]')
+    # категория картинок, название категории аттрибут data-grid-text=""
+    PICTURES_CATEGORY = (By.XPATH, '//div[contains(@class, "PopularRequestList-Item")]')
+    # картинка в категории
+    IMAGE_GRID = (By.XPATH, '//a[@class="serp-item__link"]')
+    # увеличенная картинка
+    IMAGE_SHOWN = (By.XPATH, '//img[@class="MMImage-Origin"]')
+    # кнопка "следующая картинка"
+    IMAGE_NEXT = (By.XPATH, '//div[contains(@class, "CircleButton_type_next")]')
+    # кнопка "предыдущая картинка"
+    IMAGE_PREVIOUS = (By.XPATH, '//div[contains(@class, "CircleButton_type_prev")]')

@@ -1,3 +1,4 @@
+import os
 import pytest
 from selenium import webdriver
 
@@ -12,6 +13,11 @@ def pytest_addoption(parser):
 
 @pytest.fixture(scope="function")
 def browser(request):
+    # создаем папку для скачивания изображений
+    try:
+        os.mkdir('./images')
+    except Exception as e:
+        pass
     browser_name = request.config.getoption('browser_name')
     user_language = request.config.getoption('language')
     chrome_options = webdriver.ChromeOptions()
@@ -28,4 +34,11 @@ def browser(request):
     else:
         raise pytest.UsageError("--browser_name should be chrome or firefox")
     yield browser
+    # по окончании тестов удаляем скачанные файлы и папку
+    try:
+        os.remove('./images/initial.jpg')
+        os.remove('./images/revisited.jpg')
+        os.rmdir('./images')
+    except Exception as e:
+        pass
     browser.quit()
